@@ -1,11 +1,53 @@
-//<МИКСИНЫ>===============================================================================================
+ //<МИКСИНЫ>===============================================================================================
 @import "mixins.scss";
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Heavy.eot");
+  src: local("☺"), url("../fonts/Lato-Heavy.woff") format("woff"), url("../fonts/Lato-Heavy.ttf") format("truetype"), url("../fonts/Lato-Heavy.svg") format("svg");
+  font-weight: 900;
+  font-style: normal; } 
 
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Light.eot");
+  src: local("☺"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype"), url("../fonts/Lato-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; } 
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Medium.eot");
+  src: local("☺"), url("../fonts/Lato-Medium.woff") format("woff"), url("../fonts/Lato-Medium.ttf") format("truetype"), url("../fonts/Lato-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal; } 
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.eot");
+  src: local("☺"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Semibold.eot");
+  src: local("☺"), url("../fonts/Lato-Semibold.woff") format("woff"), url("../fonts/Lato-Semibold.ttf") format("truetype"), url("../fonts/Lato-Semibold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal; }  
+
+@font-face { 
+	font-family: "Lato";
+	src: url("fonts/Lato-Bold.eot");
+	src: local("☺"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype"),
+		url("../fonts/Lato-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
 //</Подключаем шрифты>=======================================================================================
 
 //<Иконочные шрифты>==========================================================================================
@@ -13,14 +55,14 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily: "";
+$fontfamily: "Lato";
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
 
-//<ПЕРЕМЕННЫЕ>===========================================================================================================
+//<ПЕРЕМЕННЫЕ>=========================================================================================================== 
 $minwidth: 320px;
-$mw: 1170;
+$mw: 1330;
 $md1: $mw + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -30,8 +72,10 @@ $md4: 479.98;
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null.scss";
 body {
-	color: #000;
+	color: #1A1818;
 	font-size: 14px;
+	font-weight: 400;
+	a { color: #1A1818; }
 	&.lock {
 		overflow: hidden;
 	}
@@ -43,6 +87,8 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	// display: flex;
+	// flex-direction: column;
 	&.loaded {
 	}
 }
@@ -81,7 +127,7 @@ body {
 //@import "pagging.scss";
 //@import "icons.scss";
 // @import "map.scss";
-@import "popup.scss";
+// @import "popup.scss";
 @import "header.scss";
 @import "footer.scss";
 @import "home.scss";
@@ -91,9 +137,155 @@ body {
 .d-flex {
 	display: flex;
 }
+h2 {
+	font-size: 34px;
+	font-weight: 900;
+}
 //====================================================================================================================================================
 
+.info-sl {
+	padding: 25px 0;
+	// .info-sl__row
+	&__row {
+		justify-content: space-between;
+	}
+	// .info-sl__slider
+	&__slider {
+		
+
+	}
+	// .info-sl__images
+	&__images {
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 523px;
+    width: 100%;
+	}
+	&__img-item {
+		max-width: 523px;
+		width: 100%;
+		overflow: hidden;
+		img{
+			max-width: 100%;
+		}
+	}
+}
+
+.img-item-l,
+.img-item-r {
+	position: relative;
+}
+.img-l {
+	max-width: 200px;
+	width: 100%;
+	position: absolute;
+	top: 25%;
+	right: 5%;
+}
+.img-l p {
+	font-size: 32px;
+	font-weight: 900;
+	margin-bottom: 30px;
+}
+.img-l span {
+	font-size: 22px;
+	font-weight: 400;
+}
+.img-item-r p {
+	position: absolute;
+	top: 25%;
+	left: 6%;
+	max-width: 146px;
+	width: 100%;
+	font-size: 32px;
+	line-height: 37.38px;
+	font-weight: 900;
+}
+.img-item-r span {
+	font-size: 37.38px;
+	font-weight: 400;
+}
+
+.slider {
+	&__item {
+		p {
+			max-width: 248px;
+			width: 100%;
+			font-size: 47px;
+			font-weight: 900;
+			position: absolute;
+			top: 38%;
+			right: 8%;
+			color: #000;
+		}
+	}
+}
+
+/* Слайдер */
+.info-sl__slider{
+	min-width:0;
+	max-width: 792px;
+	width: 100%;
+}
+.info-sl__slider .slick-list {
+	// position: relative;
+}
+/* Точки (булиты) */
+.info-sl__slider .slick-dots{
+	display: flex;
+	width: 183px;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 20px;
+	left: 25px;
+}
+.info-sl__slider .slick-dots li{
+	list-style: none;
+}
+/* Элемент точки */
+.info-sl__slider .slick-dots li button{
+	font-size: 0;
+	width: 15px;
+	height: 13.5px;
+	background: #fff;
+	border-radius: 50%;
+}
+/* Активная точка */
+.info-sl__slider .slick-dots li.slick-active button{
+	background: #D3820F;
+}
+
+//<Популярные товары>====================================================================================================================================
+
+.popular {
+	padding: 25px 0 33px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================================================
+
 
 //<Адаптив>===========================================================================================================================================
 @media (max-width: 1100px) {
@@ -103,11 +295,11 @@ body {
 }
 
 @media (max-width: 768px) {
-	.header {
-		position: fixed;
-    width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-	}
+	// .header {
+	// 	position: fixed;
+ //    width: 100%;
+ //    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	// }
 	.icon-menu {
 		display: block;
 	}
