@@ -258,10 +258,124 @@ h2 {
 //<Популярные товары>====================================================================================================================================
 
 .popular {
-	padding: 25px 0 33px 0;
+	padding: 25px 0 20px 0;
+		h2 {
+		margin-bottom: 48px;
+	}
+	// .popular__row
+	&__row {
+		margin-bottom: 68px;
+	}
+}
+
+.prod-card {
+	// .prod-card__body
+	// margin: 0 -8.5px;
+	justify-content: space-between;
+	&__body {
+		// max-width: 252px;
+		// width: 100%;
+		padding: 20px 20px 18px 22px;
+		flex-direction: column;
+		border: 0.4px solid #C7C9CB;
+		flex: 0 1 19%;
+	}
+	// .prod-card__link
+	&__link {
+		margin: 0 auto 32px auto;
+		flex: 1 1 auto;
+		overflow: hidden;
+		position: relative;
+		img {
+			max-width: 100%;
+			flex: 0 0 175px;
+		}
+	}
+	&__sale {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 500;
+		width: 40px;
+		height: 31px;
+		background: #8ABB2A;
+		color: #fff;
+	}
+	&__text {
+		h4 {
+			line-height: 18px;
+			margin-bottom: 10px;
+			// .prod-card__manuf
+		}
+	}
+		&__manuf {
+		line-height: 18px;
+		color: #8A7165;
+		margin-bottom: 10px;
+	}
+		// .prod-card__avail
+	&__avail {
+		line-height: 18px;
+		color: #D3820F;
+		margin-bottom: 14.5px;
+	}
+	// .prod-card__price-item
+	&__price-item {
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .prod-card__price
+	&__price {
+		font-size: 20px;
+		font-weight: 600;
+	}
 }
 
 
+.popular {
+	// .popular__baner
+	&__baner {
+		background: url('../img/popular-br.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 283px;
+		position: relative;
+	}
+	// .popular__baner-text
+	&__baner-text {
+		position: absolute;
+		top: 33%;
+		left: 28%;
+		max-width: 326px;
+		width: 100%;
+		h2 {
+			font-size: 34px;
+			line-height: 40px;
+			font-weight: 600;
+			margin-bottom: 31px;
+		}
+		span {
+			font-weight: 900;
+		}
+	}
+}
+
+
+.new-items {
+	padding: 20px 0 40px 0;
+}
+
+.new-items h2 {
+	margin-bottom: 47px;
+}
+
+.new-sale {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background: #0D988C;
+}
 
 
 

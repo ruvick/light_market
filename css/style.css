@@ -1078,7 +1078,108 @@ h2 {
   background: #D3820F; }
 
 .popular {
-  padding: 25px 0 33px 0; }
+  padding: 25px 0 20px 0; }
+  .popular h2 {
+    margin-bottom: 48px; }
+  .popular__row {
+    margin-bottom: 68px; }
+
+.prod-card {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .prod-card__body {
+    padding: 20px 20px 18px 22px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 0.4px solid #C7C9CB;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 19%;
+    flex: 0 1 19%; }
+  .prod-card__link {
+    margin: 0 auto 32px auto;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow: hidden;
+    position: relative; }
+    .prod-card__link img {
+      max-width: 100%;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 175px;
+      flex: 0 0 175px; }
+  .prod-card__sale {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 500;
+    width: 40px;
+    height: 31px;
+    background: #8ABB2A;
+    color: #fff; }
+  .prod-card__text h4 {
+    line-height: 18px;
+    margin-bottom: 10px; }
+  .prod-card__manuf {
+    line-height: 18px;
+    color: #8A7165;
+    margin-bottom: 10px; }
+  .prod-card__avail {
+    line-height: 18px;
+    color: #D3820F;
+    margin-bottom: 14.5px; }
+  .prod-card__price-item {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .prod-card__price {
+    font-size: 20px;
+    font-weight: 600; }
+
+.popular__baner {
+  background: url("../img/popular-br.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 283px;
+  position: relative; }
+
+.popular__baner-text {
+  position: absolute;
+  top: 33%;
+  left: 28%;
+  max-width: 326px;
+  width: 100%; }
+  .popular__baner-text h2 {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 600;
+    margin-bottom: 31px; }
+  .popular__baner-text span {
+    font-weight: 900; }
+
+.new-items {
+  padding: 20px 0 40px 0; }
+
+.new-items h2 {
+  margin-bottom: 47px; }
+
+.new-sale {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0D988C; }
 
 @media (max-width: 1100px) {
   .container {
