@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Люстры</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="Новый сайт">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/png" href="img/favicons/icon256.png" sizes="256x256">
+	<link rel="icon" type="image/png" href="img/favicons/icon128.png" sizes="128x128">
+	<link rel="icon" type="image/png" href="img/favicons/icon64.png" sizes="64x64">
+	<link rel="icon" type="image/png" href="img/favicons/icon32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/icon16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicons/icon.svg" sizes="any">
+	<!-- Bootstrap добавил-->
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- Bootstrap Адаптив был-->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+	<div class="wrapper"> 
+		<!-- @import "header.kit" --> 
+
+
+		<main id="page" class="page"> 
+			<div class="container">
+
+				<div class="page__breadcrumb">
+					<ul>
+						<li><a href="#">Каталог</a></li>
+						<li>/ Люстры</li>
+					</ul>
+				</div>
+
+				<aside class="page__side">
+					<nav class="menu-left">
+						
+						<div class="menu-cat-left">
+							<button onclick="myFunction()" id="cat" class="menu-cat-left__btn icon-menu-left">Каталог</button>
+							<ul id="catmenu" class="catmenu">
+								<li><label><input type="checkbox" name="type[]">Светильники</label></li>
+								<li><label><input type="checkbox" name="type[]">Подвесные</label></li>
+								<li><label><input type="checkbox" name="type[]">Потолочные</label></li>
+								<li><label><input type="checkbox" name="type[]">Настенные</label></li>
+								<li><label><input type="checkbox" name="type[]">Настенно-потолочные</label></li>
+								<li><label><input type="checkbox" name="type[]">Лофт светильники</label></li>
+								<li><label><input type="checkbox" name="type[]">Гипсовые светильники</label></li>
+								<li><label><input type="checkbox" name="type[]">Накладные светильники</label></li>
+								<li><label><input type="checkbox" name="type[]">Встраиваемые</label></li>
+								<li><label><input type="checkbox" name="type[]">Точечные светильники</label></li>
+								<li><label><input type="checkbox" name="type[]">Мебельные</label></li>
+								<li><label><input type="checkbox" name="type[]">Для растений</label></li>
+							</ul>
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left">Цена, P</button>
+
+							<form class="block__form form-block form-choice" action="#">
+								<div class="form-block__item">
+									<div class="category-params-item-price">
+										<div class="category-params-item-price-table table">
+											<div class="cell">
+												<input type="text" name="form[]"id="rangefrom">
+											</div>
+											<div class="cell">
+												<input type="text" name="form[]"id="rangeto">
+											</div>
+										</div>
+										<div id="range" class="category-params-item-price-range"></div>
+									</div>
+								</div>
+							</form> 
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Место применения</button>
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Форма светильника</button>
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Форма светильника</button>
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Размеры</button>
+
+						</div>
+
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Стиль</button>
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Размеры</button>
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Тип лампочки</button>
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Страна</button>
+
+						</div>
+
+						<div class="menu-choice">
+							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Степень защиты</button>
+
+						</div>
+
+					</nav>
+
+					<div class="sidebar-sl">
+						<h3>Лучшие бренды</h3>
+						<div class="sidebar-slider">
+							<div class="sidebar-slider__item">
+								<img src="../img/sidebar-slider/sbar-sl-01.jpg" alt="">
+							</div>
+
+							<div class="sidebar-slider__item">
+								<img src="../img/sidebar-slider/sbar-sl-02.jpg" alt="">
+							</div>
+
+							<div class="sidebar-slider__item">
+								<img src="../img/sidebar-slider/sbar-sl-03.jpg" alt="">
+							</div>
+
+							<div class="sidebar-slider__item">
+								<img src="../img/sidebar-slider/sbar-sl-04.jpg" alt="">
+							</div>
+
+							<div class="sidebar-slider__item">
+								<img src="../img/sidebar-slider/sbar-sl-05.jpg" alt="">
+							</div>
+
+							<div class="sidebar-slider__item">
+								<img src="../img/sidebar-slider/sbar-sl-06.jpg" alt="">
+							</div>
+						</div>
+
+					</div>
+
+				</aside>
+
+				<div class="page__content">
+					
+				</div>
+
+			</div>
+		</main>
+
+		<section id="logist" class="logist">
+			<div class="container">
+				<div class="logist__row d-flex">
+
+					<div class="logist__item">
+						<img src="img/logic-01.jpg" alt="">
+						<div class="logist__item-text">
+							<h3>ДОСТАВКА</h3>
+							<p>С нашей помощью купить
+								светильники в Москве и
+								любом другом городе РФ
+								становится легко, выгодно и
+								удобно.
+							</p>
+							<p>
+								Мы заботимся о своих
+								покупателях и предлагаем
+								лучшие условия
+								сотрудничества.
+							</p>
+						</div>
+					</div>
+
+					<div class="logist__item">
+						<img src="img/logic-02.jpg" alt="">
+						<div class="logist__item-text">
+							<h3>ГАРАНТИЯ ЛУЧШЕЙ 
+								ЦЕНЫ
+							</h3>
+							<p>
+								У нас выгоднее всего!
+								Покажите, где можно купить
+								конкретный товар дешевле, и
+								мы сделаем вам еще более
+								выгодное предложение.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="advant" class="advant">
+			<div class="container">
+				<div class="advant__row d-flex">
+					
+					<div class="advant__item advant-icon-01">
+						<h4>Обширный <br>
+							каталог
+						</h4>
+						<p>
+							Безналичный расчет, 
+							электронными деньгами, 
+							наличными или картой при 
+							курьерской доставке.
+						</p>
+					</div>
+
+					<div class="advant__item advant-icon-02">
+						<h4>Оплачивайте, <br>
+							как удобно вам
+						</h4>
+						<p>
+							Безналичный расчет, 
+							электронными деньгами, 
+							наличными или картой при 
+							курьерской доставке.
+						</p>
+					</div>
+
+					<div class="advant__item advant-icon-03">
+						<h4>Простая система <br>
+							возврата и обмена
+						</h4>
+						<p>
+							Безналичный расчет, 
+							электронными деньгами, 
+							наличными или картой при 
+							курьерской доставке.
+						</p>
+					</div>
+
+					<div class="advant__item advant-icon-04">
+						<h4>2 года <br>
+							гарантии
+						</h4>
+						<p>
+							Безналичный расчет, 
+							электронными деньгами, 
+							наличными или картой при 
+							курьерской доставке.
+						</p>
+					</div>
+
+					<div class="advant__item advant-icon-05">
+						<h4>Шоу-рум <br>
+							у вас дома
+						</h4>
+						<p>
+							Безналичный расчет, 
+							электронными деньгами, 
+							наличными или картой при 
+							курьерской доставке.
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<!-- @import "footer.kit" -->
+	</div>
+
+	<!-- @import "js.kit" -->
+</body>
+</html>

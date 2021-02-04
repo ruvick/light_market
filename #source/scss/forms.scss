@@ -16,7 +16,7 @@
 	font-weight: 500;
 	border-radius: 15px;
 	&:hover{}
-	&.fw{width: 100%;}
+	&.fw{width: 100%;}  
 }
 //</BUTTONS>====================================================================================================
 
@@ -131,7 +131,7 @@ textarea.input{
 
 //<RANGE>====================================================================================================
 .category-params-item-price {}
-.category-params-item-price-table {margin-bottom: 25px;
+.category-params-item-price-table {margin-bottom: 25px; 
 	.cell {
 		&:first-child{padding-right: 15px;position: relative;
 			&:after{content:'-';position: absolute;right: -4px;top: 8px;font-size: 20px;}

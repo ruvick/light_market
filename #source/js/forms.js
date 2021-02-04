@@ -19,7 +19,7 @@ function forms(){
 				scrollspeed:scs,
 				mousescrollstep:mss,
 				directionlockdeadzone:0,
-				cursorborder: "0px solid #fff",
+				cursorborder: "0px solid #fff", 
 			};
 			return opt;
 		}
@@ -439,18 +439,21 @@ function forms(){
 			$(this).parent().find('.quantity__input').val(n);
 		return false;
 	});
+
+
+
 	//RANGE
 	if($("#range" ).length>0){
 		$("#range" ).slider({
 			range: true,
 			min: 0,
-			max: 5000,
-			values: [0, 5000],
+			max: 50000,
+			values: [0, 50000],
 			slide: function( event, ui ){
 				$('#rangefrom').val(ui.values[0]);
 				$('#rangeto').val(ui.values[1]);
 				$(this).find('.ui-slider-handle').eq(0).html('<span>'+ui.values[0]+'</span>');
-				$(this).find('.ui-slider-handle').eq(1).html('<span>'+ui.values[1]+'</span>');
+				$(this).find('.ui-slider-handle').eq(1).html('<span>'+ui.values[1]+'</span>');  
 			},
 			change: function( event, ui ){
 				if(ui.values[0]!=$( "#range" ).slider( "option","min") || ui.values[1]!=$( "#range" ).slider( "option","max")){
@@ -460,7 +463,7 @@ function forms(){
 				}
 			}
 		});
-		$('#rangefrom').val($( "#range" ).slider( "values", 0 ));
+		$('#rangefrom').val($( "#range" ).slider( "values", 0 )); 
 		$('#rangeto').val($( "#range" ).slider( "values", 1 ));
 
 		$("#range" ).find('.ui-slider-handle').eq(0).html('<span>'+$( "#range" ).slider( "option","min")+'</span>');
@@ -487,6 +490,9 @@ function forms(){
 		$("#range" ).find('.ui-slider-handle').eq(0).addClass('left');
 		$("#range" ).find('.ui-slider-handle').eq(1).addClass('right');
 	}
+
+
+
 	//ADDFILES
 	$('.form-addfile__input').change(function(e){
 		if($(this).val()!=''){
