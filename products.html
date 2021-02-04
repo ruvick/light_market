@@ -99,7 +99,7 @@
 </header>    
 
 
-		<main id="page" class="page"> 
+		<section id="page" class="page"> 
 			<div class="container">
 
 				<div class="page__breadcrumb">
@@ -109,247 +109,641 @@
 					</ul>
 				</div>
 
-				<aside class="page__side">
-					<nav class="menu-left">
-						
-						<div class="menu-cat-left">
-							<button onclick="myFunction()" id="cat" class="menu-cat-left__btn icon-menu-left">Каталог</button>
-							<ul id="catmenu" class="catmenu">
-								<li><label><input type="checkbox" name="type[]">Светильники</label></li>
-								<li><label><input type="checkbox" name="type[]">Подвесные</label></li>
-								<li><label><input type="checkbox" name="type[]">Потолочные</label></li>
-								<li><label><input type="checkbox" name="type[]">Настенные</label></li>
-								<li><label><input type="checkbox" name="type[]">Настенно-потолочные</label></li>
-								<li><label><input type="checkbox" name="type[]">Лофт светильники</label></li>
-								<li><label><input type="checkbox" name="type[]">Гипсовые светильники</label></li>
-								<li><label><input type="checkbox" name="type[]">Накладные светильники</label></li>
-								<li><label><input type="checkbox" name="type[]">Встраиваемые</label></li>
-								<li><label><input type="checkbox" name="type[]">Точечные светильники</label></li>
-								<li><label><input type="checkbox" name="type[]">Мебельные</label></li>
-								<li><label><input type="checkbox" name="type[]">Для растений</label></li>
-							</ul>
-						</div>
+				<div class="page__body d-flex">
 
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left">Цена, P</button>
+					<aside class="page__side">
+						<nav class="menu-left">
 
-							<form class="block__form form-block form-choice" action="#">
-								<div class="form-block__item">
-									<div class="category-params-item-price">
-										<div class="category-params-item-price-table table">
-											<div class="cell">
-												<input type="text" name="form[]"id="rangefrom">
+							<div class="menu-cat-left">
+								<button id="cat" class="menu-cat-left__btn icon-menu-left">Каталог</button>
+								<ul id="catmenu" class="catmenu">
+									<li><label><input type="checkbox" name="type[]">Светильники</label></li>
+									<li><label><input type="checkbox" name="type[]">Подвесные</label></li>
+									<li><label><input type="checkbox" name="type[]">Потолочные</label></li>
+									<li><label><input type="checkbox" name="type[]">Настенные</label></li>
+									<li><label><input type="checkbox" name="type[]">Настенно-потолочные</label></li>
+									<li><label><input type="checkbox" name="type[]">Лофт светильники</label></li>
+									<li><label><input type="checkbox" name="type[]">Гипсовые светильники</label></li>
+									<li><label><input type="checkbox" name="type[]">Накладные светильники</label></li>
+									<li><label><input type="checkbox" name="type[]">Встраиваемые</label></li>
+									<li><label><input type="checkbox" name="type[]">Точечные светильники</label></li>
+									<li><label><input type="checkbox" name="type[]">Мебельные</label></li>
+									<li><label><input type="checkbox" name="type[]">Для растений</label></li>
+								</ul>
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left">Цена, P</button>
+
+								<form class="block__form form-block form-choice" action="#">
+									<div class="form-block__item">
+										<div class="category-params-item-price">
+											<div class="category-params-item-price-table table">
+												<div class="cell">
+													<input type="text" name="form[]"id="rangefrom">
+												</div>
+												<div class="cell">
+													<input type="text" name="form[]"id="rangeto">
+												</div>
 											</div>
-											<div class="cell">
-												<input type="text" name="form[]"id="rangeto">
-											</div>
+											<div id="range" class="category-params-item-price-range"></div>
 										</div>
-										<div id="range" class="category-params-item-price-range"></div>
 									</div>
+								</form> 
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Место применения</button>
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Форма светильника</button>
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Форма светильника</button>
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Размеры</button>
+
+							</div>
+
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Стиль</button>
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Размеры</button>
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Тип лампочки</button>
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Страна</button>
+
+							</div>
+
+							<div class="menu-choice">
+								<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Степень защиты</button>
+
+							</div>
+
+						</nav>
+
+						<div class="sidebar-sl">
+							<h3>Лучшие бренды</h3>
+							<div class="sidebar-slider">
+								<div class="sidebar-slider__item">
+									<img src="../img/sidebar-slider/sbar-sl-01.jpg" alt="">
 								</div>
-							</form> 
 
-						</div>
+								<div class="sidebar-slider__item">
+									<img src="../img/sidebar-slider/sbar-sl-02.jpg" alt="">
+								</div>
 
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Место применения</button>
+								<div class="sidebar-slider__item">
+									<img src="../img/sidebar-slider/sbar-sl-03.jpg" alt="">
+								</div>
 
-						</div>
+								<div class="sidebar-slider__item">
+									<img src="../img/sidebar-slider/sbar-sl-04.jpg" alt="">
+								</div>
 
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Форма светильника</button>
+								<div class="sidebar-slider__item">
+									<img src="../img/sidebar-slider/sbar-sl-05.jpg" alt="">
+								</div>
 
-						</div>
-
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Форма светильника</button>
-
-						</div>
-
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Размеры</button>
-
-						</div>
-
-
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Стиль</button>
-
-						</div>
-
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Размеры</button>
-
-						</div>
-
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Тип лампочки</button>
-
-						</div>
-
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Страна</button>
-
-						</div>
-
-						<div class="menu-choice">
-							<button onclick="myFunction()" id="cat" class="menu-choice__btn icon-menu-left active">Степень защиты</button>
-
-						</div>
-
-					</nav>
-
-					<div class="sidebar-sl">
-						<h3>Лучшие бренды</h3>
-						<div class="sidebar-slider">
-							<div class="sidebar-slider__item">
-								<img src="../img/sidebar-slider/sbar-sl-01.jpg" alt="">
+								<div class="sidebar-slider__item">
+									<img src="../img/sidebar-slider/sbar-sl-06.jpg" alt="">
+								</div>
 							</div>
 
-							<div class="sidebar-slider__item">
-								<img src="../img/sidebar-slider/sbar-sl-02.jpg" alt="">
+						</div>
+
+					</aside>
+
+					<main class="page__main main">
+						<h1>Люстры</h1>
+
+						<div class="main-block__choice d-flex">
+
+							<div class="main-block__select d-flex">
+								<p>Сортировать по</p>
+
+								<select name="form[]" id="" class="select-block">
+									<option value="1">Популярные</option>
+									<option value="2" option="">Популярные 2</option>
+									<option value="3" option="">Популярные 3</option>
+									<option value="3" option="">Популярные 4</option>
+								</select>
+
 							</div>
 
-							<div class="sidebar-slider__item">
-								<img src="../img/sidebar-slider/sbar-sl-03.jpg" alt="">
+							<p>Товары 1-40 из 20975</p>
+						</div>
+
+						<div class="main-prod-card prod-card d-flex">
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale new-sale">NEW</span>
+									<img src="../img/product/pr-07.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
 							</div>
 
-							<div class="sidebar-slider__item">
-								<img src="../img/sidebar-slider/sbar-sl-04.jpg" alt="">
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale new-sale">NEW</span>
+									<img src="../img/product/pr-08.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
 							</div>
 
-							<div class="sidebar-slider__item">
-								<img src="../img/sidebar-slider/sbar-sl-05.jpg" alt="">
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale new-sale">NEW</span>
+									<img src="../img/product/pr-09.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
 							</div>
 
-							<div class="sidebar-slider__item">
-								<img src="../img/sidebar-slider/sbar-sl-06.jpg" alt="">
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale new-sale">NEW</span>
+									<img src="../img/product/pr-10.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="main-prod-card prod-card d-flex">
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale">-40%</span>
+									<img src="../img/product/pr-02.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<!-- <span class="prod-card__sale">-40%</span> -->
+									<img src="../img/product/pr-03.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale">-20%</span>
+									<img src="../img/product/pr-04.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<!-- <span class="prod-card__sale">-40%</span> -->
+									<img src="../img/product/pr-05.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="modern-baner">
+							<img src="img/modern-baner.jpg" alt="">
+							<div class="modern-baner__text">
+								<h3>Современные
+									cветильники
+								</h3>
+								<h3>
+									FAVOURITE
+								</h3>
 							</div>
 						</div>
+
+						<div class="main-prod-card prod-card d-flex">
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale">-40%</span>
+									<img src="../img/product/pr-02.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<!-- <span class="prod-card__sale">-40%</span> -->
+									<img src="../img/product/pr-03.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale">-20%</span>
+									<img src="../img/product/pr-04.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<!-- <span class="prod-card__sale">-40%</span> -->
+									<img src="../img/product/pr-05.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="main-prod-card prod-card d-flex">
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale">-40%</span>
+									<img src="../img/product/pr-02.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<!-- <span class="prod-card__sale">-40%</span> -->
+									<img src="../img/product/pr-03.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<span class="prod-card__sale">-20%</span>
+									<img src="../img/product/pr-04.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+							<div class="prod-card__body d-flex">
+								<a href="#" class="prod-card__link">
+									<!-- <span class="prod-card__sale">-40%</span> -->
+									<img src="../img/product/pr-05.jpg" alt="">
+								</a>
+
+								<div class="prod-card__text">
+									<a href="#">
+										<h4>Подвесной светильник 
+											Lightstar Escica 806010
+										</h4>
+									</a>
+									<p class="prod-card__manuf">Lightstar (ИТАЛИЯ)</p>
+									<p class="prod-card__avail">В наличии</p>
+								</div>
+								<div class="prod-card__price-item d-flex">
+									<p class="prod-card__price">6 463 P</p>
+									<a href="#" class="btn">В корзину</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="show-link">
+							<a href="#" class="show-link__btn">Показать еще</a>
+						</div>
+
+						<nav class="navigation pagination" role="navigation">
+
+						</nav>
+
+						</main>
 
 					</div>
 
-				</aside>
-
-				<div class="page__content">
-					
 				</div>
+			</section>
 
-			</div>
-		</main>
+			<section id="logist" class="logist">
+				<div class="container">
+					<div class="logist__row d-flex">
 
-		<section id="logist" class="logist">
-			<div class="container">
-				<div class="logist__row d-flex">
+						<div class="logist__item">
+							<img src="img/logic-01.jpg" alt="">
+							<div class="logist__item-text">
+								<h3>ДОСТАВКА</h3>
+								<p>С нашей помощью купить
+									светильники в Москве и
+									любом другом городе РФ
+									становится легко, выгодно и
+									удобно.
+								</p>
+								<p>
+									Мы заботимся о своих
+									покупателях и предлагаем
+									лучшие условия
+									сотрудничества.
+								</p>
+							</div>
+						</div>
 
-					<div class="logist__item">
-						<img src="img/logic-01.jpg" alt="">
-						<div class="logist__item-text">
-							<h3>ДОСТАВКА</h3>
-							<p>С нашей помощью купить
-								светильники в Москве и
-								любом другом городе РФ
-								становится легко, выгодно и
-								удобно.
-							</p>
+						<div class="logist__item">
+							<img src="img/logic-02.jpg" alt="">
+							<div class="logist__item-text">
+								<h3>ГАРАНТИЯ ЛУЧШЕЙ 
+									ЦЕНЫ
+								</h3>
+								<p>
+									У нас выгоднее всего!
+									Покажите, где можно купить
+									конкретный товар дешевле, и
+									мы сделаем вам еще более
+									выгодное предложение.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="advant" class="advant">
+				<div class="container">
+					<div class="advant__row d-flex">
+
+						<div class="advant__item advant-icon-01">
+							<h4>Обширный <br>
+								каталог
+							</h4>
 							<p>
-								Мы заботимся о своих
-								покупателях и предлагаем
-								лучшие условия
-								сотрудничества.
+								Безналичный расчет, 
+								электронными деньгами, 
+								наличными или картой при 
+								курьерской доставке.
 							</p>
 						</div>
-					</div>
 
-					<div class="logist__item">
-						<img src="img/logic-02.jpg" alt="">
-						<div class="logist__item-text">
-							<h3>ГАРАНТИЯ ЛУЧШЕЙ 
-								ЦЕНЫ
-							</h3>
+						<div class="advant__item advant-icon-02">
+							<h4>Оплачивайте, <br>
+								как удобно вам
+							</h4>
 							<p>
-								У нас выгоднее всего!
-								Покажите, где можно купить
-								конкретный товар дешевле, и
-								мы сделаем вам еще более
-								выгодное предложение.
+								Безналичный расчет, 
+								электронными деньгами, 
+								наличными или картой при 
+								курьерской доставке.
 							</p>
 						</div>
+
+						<div class="advant__item advant-icon-03">
+							<h4>Простая система <br>
+								возврата и обмена
+							</h4>
+							<p>
+								Безналичный расчет, 
+								электронными деньгами, 
+								наличными или картой при 
+								курьерской доставке.
+							</p>
+						</div>
+
+						<div class="advant__item advant-icon-04">
+							<h4>2 года <br>
+								гарантии
+							</h4>
+							<p>
+								Безналичный расчет, 
+								электронными деньгами, 
+								наличными или картой при 
+								курьерской доставке.
+							</p>
+						</div>
+
+						<div class="advant__item advant-icon-05">
+							<h4>Шоу-рум <br>
+								у вас дома
+							</h4>
+							<p>
+								Безналичный расчет, 
+								электронными деньгами, 
+								наличными или картой при 
+								курьерской доставке.
+							</p>
+						</div>
+
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<section id="advant" class="advant">
-			<div class="container">
-				<div class="advant__row d-flex">
-					
-					<div class="advant__item advant-icon-01">
-						<h4>Обширный <br>
-							каталог
-						</h4>
-						<p>
-							Безналичный расчет, 
-							электронными деньгами, 
-							наличными или картой при 
-							курьерской доставке.
-						</p>
-					</div>
-
-					<div class="advant__item advant-icon-02">
-						<h4>Оплачивайте, <br>
-							как удобно вам
-						</h4>
-						<p>
-							Безналичный расчет, 
-							электронными деньгами, 
-							наличными или картой при 
-							курьерской доставке.
-						</p>
-					</div>
-
-					<div class="advant__item advant-icon-03">
-						<h4>Простая система <br>
-							возврата и обмена
-						</h4>
-						<p>
-							Безналичный расчет, 
-							электронными деньгами, 
-							наличными или картой при 
-							курьерской доставке.
-						</p>
-					</div>
-
-					<div class="advant__item advant-icon-04">
-						<h4>2 года <br>
-							гарантии
-						</h4>
-						<p>
-							Безналичный расчет, 
-							электронными деньгами, 
-							наличными или картой при 
-							курьерской доставке.
-						</p>
-					</div>
-
-					<div class="advant__item advant-icon-05">
-						<h4>Шоу-рум <br>
-							у вас дома
-						</h4>
-						<p>
-							Безналичный расчет, 
-							электронными деньгами, 
-							наличными или картой при 
-							курьерской доставке.
-						</p>
-					</div>
-
-				</div>
-			</div>
-		</section>
+			</section>
 
 
-		<footer id="footer" class="footer">
+			<footer id="footer" class="footer">
 	<div class='container'>
 		<div class="footer__row d-flex">
 
@@ -428,13 +822,13 @@
 		</div>
 	</div>
 </footer> 
-	</div>
+		</div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
 <script src="js/custom.js" ></script> 
 
-</body>
-</html>
+	</body>
+	</html>

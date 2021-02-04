@@ -9,7 +9,7 @@ if (iconMenu) {
 		body.classList.toggle("lock");
 		menuBody.classList.toggle("active");
 	});
-}
+} 
 
 
 
@@ -80,6 +80,19 @@ jQuery('.header__form button').click(function(e){
   	adaptiveHeight: true,
   	vertical: true
 	});
+
+
+    $('.menu-cat-left__btn').click(function(event) {
+        event.stopPropagation();
+        $('#catmenu').toggle();
+    });
+
+    $('body').click(function() {
+        var submenu = $('#catmenu');
+        if(submenu.is(":visible")) {
+            submenu.hide();
+        }
+    });
 
 
 

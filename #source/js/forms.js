@@ -5,7 +5,7 @@ function forms(){
 		function selectscrolloptions(){
 				var scs=100;
 				var mss=50;
-			if(isMobile.any()){
+			if(isMobile.any()){ 
 				scs=10;
 				mss=1;
 			}
@@ -103,7 +103,7 @@ function forms(){
 				$(".select_"+ind+" .select-options-scroll").niceScroll('.select-options-list',selectscrolloptions());
 			});
 		}
-			select();
+			// select();
 
 		$('body').on('keyup','input.select-title__value',function() {
 			$('.select').not($(this).parents('.select')).removeClass('active').find('.select-options').slideUp(50);

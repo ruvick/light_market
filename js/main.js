@@ -1,6 +1,6 @@
 //@prepros-append jq-start.js
 //@prepros-append forms.js
-// @prepros-append slick.min.js
+//@prepros-append slick.min.js
 //@prepros-append jquery.inputmask.bundle.min.js
 //@prepros-append script.js
 //@prepros-append jq-end.js  
@@ -29,7 +29,7 @@ function forms(){
 		function selectscrolloptions(){
 				var scs=100;
 				var mss=50;
-			if(isMobile.any()){
+			if(isMobile.any()){ 
 				scs=10;
 				mss=1;
 			}
@@ -127,7 +127,7 @@ function forms(){
 				$(".select_"+ind+" .select-options-scroll").niceScroll('.select-options-list',selectscrolloptions());
 			});
 		}
-			select();
+			// select();
 
 		$('body').on('keyup','input.select-title__value',function() {
 			$('.select').not($(this).parents('.select')).removeClass('active').find('.select-options').slideUp(50);
@@ -757,7 +757,7 @@ if (iconMenu) {
 		body.classList.toggle("lock");
 		menuBody.classList.toggle("active");
 	});
-}
+} 
 
 
 
@@ -828,6 +828,19 @@ jQuery('.header__form button').click(function(e){
   	adaptiveHeight: true,
   	vertical: true
 	});
+
+
+    $('.menu-cat-left__btn').click(function(event) {
+        event.stopPropagation();
+        $('#catmenu').toggle();
+    });
+
+    $('body').click(function() {
+        var submenu = $('#catmenu');
+        if(submenu.is(":visible")) {
+            submenu.hide();
+        }
+    });
 
 
 
