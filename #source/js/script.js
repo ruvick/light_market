@@ -82,17 +82,17 @@ jQuery('.header__form button').click(function(e){
 	});
 
 
-    $('.menu-cat-left__btn').click(function(event) {
-        event.stopPropagation();
-        $('#catmenu').toggle();
-    });
+    // $('.menu-cat-left__btn').click(function(event) {
+    //     event.stopPropagation();
+    //     $('#catmenu').toggle();
+    // });
 
-    $('body').click(function() {
-        var submenu = $('#catmenu');
-        if(submenu.is(":visible")) {
-            submenu.hide();
-        }
-    });
+    // $('body').click(function() {
+    //     var submenu = $('#catmenu');
+    //     if(submenu.is(":visible")) {
+    //         submenu.hide();
+    //     }
+    // });
 
 
 
