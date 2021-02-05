@@ -93,7 +93,7 @@ body {
 	}
 }
 
-.page {
+section {
 	flex: 1 1 auto;
 }
 //</ОБОЛОЧКА>===========================================================================================================
@@ -843,7 +843,7 @@ h2 {
 	&__block-dot {
 		margin-right: 20px;
 		justify-content: space-between;
-		width: 130px;
+		width: 30px;
 	}
 	// .pagination__dot
 	&__dot {
@@ -860,7 +860,7 @@ h2 {
 		align-items: center;
 		font-size: 12px;
 		border: 0.4px solid #C7C9CB;
-		margin-left: 37px;
+		margin-left: 13px;
 		position: relative;
 		&:after {
 			content: "";
@@ -877,6 +877,95 @@ h2 {
 .current {
 	color: #D3820F;
 }
+
+//<стр Отедельного товара>====================================================================================================================================
+
+.select-prod {
+	padding-top: 30.8px;
+}
+
+.select-prod .breadcrumb {
+	padding-left: 0;
+	margin-bottom: 19px;
+}
+
+.select-prod .breadcrumb a {
+	color: #D3820F;
+}
+
+.select-prod h1 {
+	font-size: 34px;
+	font-weight: bold;
+	line-height: 35px;
+	margin-bottom: 30.5px;
+}
+
+.select-prod-block {
+	justify-content: space-between;
+}
+
+.select-prod-sl {
+	border: 0.4px solid #C7C9CB;
+	max-width: 975px;
+	width: 100%;
+	padding: 21px 25px 25px 25px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.select-slider-big {
+	margin-bottom: 25px;
+}
+.select-slider-big__item {
+	text-align: center;
+}
+
+
+.select-prod-slider {
+	max-width: 536px;
+	width: 100%;
+	margin: 0px auto;
+}
+.select-prod-slider__item {
+	max-width: 100px !important;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+	border: 0.4px solid #C7C9CB;
+}
+.select-prod-slider__item img {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.select-prod-slider.slick-slider .slick-track {
+  width: 100% !important;
+  justify-content: space-between;
+}
+
+.sl-big__icon-img {
+	position: absolute;
+	right: 25px;
+}
+
+.sl-big__icon-sale .sl-big__sale {
+	top: 80px;
+}
+
+
+// Карточка с ценой
+.select-prod__price {
+	max-width: 332px;
+	width: 100%;
+
+}
+
+.select__price {
+	width: 100%;
+	border: 0.4px solid #C7C9CB;
+}
+
 
 
 

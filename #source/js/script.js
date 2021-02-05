@@ -56,7 +56,7 @@ jQuery('.header__form button').click(function(e){
     });
 
 
-// Slider
+// Slider на главной
 	$('.info-sl__slider').slick( {
 		arrows: false,
 		dots: true,
@@ -69,6 +69,7 @@ jQuery('.header__form button').click(function(e){
 	});
 
 
+// Slider в Сайдбаре
 	$('.sidebar-slider').slick( {
 		arrows: true,
 		dots: false,
@@ -82,17 +83,30 @@ jQuery('.header__form button').click(function(e){
 	});
 
 
-    // $('.menu-cat-left__btn').click(function(event) {
-    //     event.stopPropagation();
-    //     $('#catmenu').toggle();
-    // });
+// Slider Товара
+	$('.select-prod-slider').slick( {
+		arrows: false,
+		dots: false,
+  	infinite: true,
+  	speed: 1000,
+  	slidesToShow: 4,
+  	slidesToScroll: 1,
+  	 centerMode: true,
+  	focusOnSelect: true,
+  	autoplaySpeed: 1800,
+  	asNavFor: ".select-slider-big",
+  	adaptiveHeight: true
+	});
+	$('.select-slider-big').slick( {
+		arrows: false,
+		dots: false,
+		fade: true,
+		slidesToShow: 1,
+  	slidesToScroll: 1,
+  	draggable: false,
+		asNavFor: ".select-prod-slider"
+	});
 
-    // $('body').click(function() {
-    //     var submenu = $('#catmenu');
-    //     if(submenu.is(":visible")) {
-    //         submenu.hide();
-    //     }
-    // });
 
 
 
