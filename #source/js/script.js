@@ -108,6 +108,28 @@ jQuery('.header__form button').click(function(e){
 	});
 
 
+ 
+$('.minus').click(function () {
+  var $input = $(this).parent().find('input');
+  var count = parseInt($input.val()) - 1;
+  count = count < 1 ? 1 : count;
+  $input.val(count);
+  $input.change();
+  return false;
+ });
+$('.plus').click(function () {
+  var $input = $(this).parent().find('input');
+  $input.val(parseInt($input.val()) + 1);
+  $input.change();
+  return false;
+});
+
+
+
+
+
+
+
 
 
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
