@@ -1863,7 +1863,8 @@ h2 {
 
 .sidebar-slider__item img {
   max-width: 100%;
-  margin-bottom: 40px; }
+  /*max-height: 146px;*/
+  margin-bottom: 35px; }
 
 /* Стрелка */
 .sidebar-slider .slick-arrow {
@@ -2340,7 +2341,7 @@ h2 {
   background: #E0E1E3; }
 
 .tech-text__footnote {
-  padding-top: 6px;
+  padding-top: 3px;
   padding-left: 20px;
   border-top: 1px solid #EDEEEF; }
 

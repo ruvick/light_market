@@ -835,7 +835,7 @@ jQuery('.header__form button').click(function(e){
   	speed: 1000,
   	slidesToShow: 1,
   	autoplay: true,
-  	// autoplaySpeed: 1800,
+  	autoplaySpeed: 1500,
   	adaptiveHeight: true,
   	vertical: true
 	});
