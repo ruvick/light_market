@@ -11,13 +11,22 @@ if (iconMenu) {
 	});
 }
 
+let menuCat = document.querySelector(".menu__catalogy"); 
+if (menuCat) {
+	menuCat.addEventListener("click", function () {
+		menuCat.classList.toggle("active");
+		// body.classList.toggle("lock");
+		menuBody.classList.toggle("active");
+	});
+}
+
 
 // Открытие каталога
 let butcat = document.querySelector(".menu-cat-left__btn"); 
 let mcatalog = document.querySelector(".catmenu"); 
 if (butcat) {
 	butcat.addEventListener("click", function () {
-		mcatalog.classList.toggle("active");
+		mcatalog.classList.toggle("active"); 
 	});
 }
 

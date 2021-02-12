@@ -14,7 +14,7 @@
 .header-top ul {
 	display: flex;
 	align-items: center;
-	justify-content: space-between; 
+	justify-content: space-between;  
 	height: 17px;
 }
 .header-top ul li {
@@ -39,6 +39,7 @@
 		justify-content: space-between;
 		align-items: center; 
 		min-height: 136px;
+		position: relative;
 	}
 	// .header__logo
 	&__logo {
@@ -243,7 +244,7 @@
 .icon-menu {
  display: none;
  position: absolute;
- top: 29px;
+ top: 25px;
  right: 10px;
  width: 30px;
  height: 18px;
@@ -289,29 +290,64 @@
 
 // Боковое меню
 .mob-menu {
-  position: fixed;
-  z-index: 50000;
+  position: absolute;
+  z-index: 90000;
   background: rgba(0, 0, 0, 0.8);
-  // background: #fff;
+  background: #fff;
   top: 0;
-  width: 50%;
-  height: 100%;
-  padding: 35px 10px 0px 20px;
+  width: 20%;
+  // padding: 0 0 0 38px;
   margin-top: 77px;
+  margin-top: 190px;
   overflow: auto;
-  right: -100%;
-  -webkit-transition: right 0.8s;
-  -o-transition: right 0.8s;
-  transition: right 0.8s; }
+  left: -100%;
+  -webkit-transition: left 0.8s;
+  -o-transition: left 0.8s;
+  transition: left 0.8s; }
 
 .mob-menu.active {
-  right: 0%; }
+  left: 0%; }
 
 .mob-menu li a {
-	color: #fff;
-	padding-bottom: 13px;
-	display: inline-block;
+   display: flex;
+   align-items: center;
+   height: 33px;
+   color: #000;
+   padding-left: 20px;
+   // border-left: 1px solid grey;
+   border-bottom: 1px solid #EDEEEF;
 }
+.mob-menu__addit li a {
+	background: #999;
+}
+
+
+
+// .mob-menu {
+//   position: fixed;
+//   z-index: 50000;
+//   background: rgba(0, 0, 0, 0.8);
+//   // background: #fff;
+//   top: 0;
+//   width: 50%;
+//   height: 100%;
+//   padding: 35px 10px 0px 20px;
+//   margin-top: 77px;
+//   overflow: auto;
+//   right: -100%;
+//   -webkit-transition: right 0.8s;
+//   -o-transition: right 0.8s;
+//   transition: right 0.8s; }
+
+// .mob-menu.active {
+//   right: 0%; }
+
+// .mob-menu li a {
+// 	color: #fff;
+// 	padding-bottom: 13px;
+// 	display: inline-block;
+// }
+
 
 // Стандартное меню
 // Старое меню
