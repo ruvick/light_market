@@ -9,8 +9,27 @@ if (iconMenu) {
 		body.classList.toggle("lock");
 		menuBody.classList.toggle("active");
 	});
-} 
+}
 
+
+// Открытие каталога
+let butcat = document.querySelector(".menu-cat-left__btn"); 
+let mcatalog = document.querySelector(".catmenu"); 
+if (butcat) {
+	butcat.addEventListener("click", function () {
+		mcatalog.classList.toggle("active");
+	});
+}
+
+
+// Открытие меню ползунков
+let butmprice = document.querySelector(".menu-choice__btn"); 
+let sldform = document.querySelector(".form-choice"); 
+if (butmprice) {
+	butmprice.addEventListener("click", function () {
+		sldform.classList.toggle("active");
+	});
+}
 
 
 // Маска телефона
@@ -20,40 +39,39 @@ jQuery("input[type=tel]").inputmask(inputmask_phone);
 
 
 //Валидация телефона + Отправщик
-jQuery('.header__form button').click(function(e){ 
-        e.preventDefault();
+jQuery('.footer__forms button').click(function(e){ 
+  e.preventDefault();
         
-        let persPhone = jQuery('.header__form input[name=tel]').val(); 
-        if ((persPhone == "")||(persPhone.indexOf("_")>0)) { 
-            $(this).siblings('input[name=tel]').css("background-color","#ff91a4")
-            return;
-        }
+  let persPhone = jQuery('.footer__forms input[name=email]').val(); 
+    if ((persPhone == "")||(persPhone.indexOf("_")>0)) { 
+        $(this).siblings('input[name=email]').css("background-color","#ff91a4")
+          return;
+     }
         
-        var  jqXHR = jQuery.post(
-          "../sender/send.php",
-            {
-                phone: jQuery('.header__form input[name=tel]').val(),    
-                name: jQuery('.header__form input[name=name]').val(),
-                mail: jQuery('.header__form textarea[name=text]').val(),
-            }
+  var  jqXHR = jQuery.post(
+    "../sender/send.php",
+    {
+     phone: jQuery('.footer__forms input[name=tel]').val(),    
+     name: jQuery('.footer__forms input[name=name]').val(),
+     mail: jQuery('.footer__forms textarea[name=text]').val(),
+    }
             
-        );
-        
-        
-        jqXHR.done(function (responce) {
-            console.log(responce);
-            document.location.href = "../thank-you.html"; 
-            jQuery('.header__form input[name=tel]').val("");  
-            jQuery('.header__form input[name=name]').val("");
-            jQuery('.header__form textarea[name=text]').val("");
-        });
-        
-        jqXHR.fail(function (responce) {
-            console.log(responce);
-            alert("Произошла ошибка попробуйте позднее!");
-        });
- 
+   );
+
+    jqXHR.done(function (responce) {
+      console.log(responce);
+      document.location.href = "../thank-you.html"; 
+      jQuery('.footer__forms input[name=tel]').val("");  
+      jQuery('.footer__forms input[name=name]').val("");
+      jQuery('.footer__forms textarea[name=text]').val("");
     });
+        
+    jqXHR.fail(function (responce) {
+      console.log(responce);
+      alert("Произошла ошибка попробуйте позднее!");
+    });
+ 
+});
 
 
 // Slider на главной
