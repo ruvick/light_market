@@ -25,7 +25,7 @@
 .header-top ul li a {
 	color: #fff;
 	font-weight: 300;
-	// padding-left: 50px; 
+	// padding-left: 50px;  
 }
 .header-top ul li a:hover {
 	border-bottom: 2px solid #fff;
@@ -39,7 +39,7 @@
 		justify-content: space-between;
 		align-items: center; 
 		min-height: 136px;
-		position: relative;
+		// position: relative;
 	}
 	// .header__logo
 	&__logo {
@@ -296,9 +296,10 @@
   background: #fff;
   top: 0;
   width: 20%;
+  // height: 100%;
   // padding: 0 0 0 38px;
-  margin-top: 77px;
-  margin-top: 190px;
+  margin-top: 5px;
+  // margin-top: 190px;
   overflow: auto;
   left: -100%;
   -webkit-transition: left 0.8s;
