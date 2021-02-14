@@ -27,7 +27,7 @@
   font-style: normal; }  
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Lato'; 
   src: url("../fonts/Lato-Regular.eot");
   src: local("☺"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato-Regular.svg") format("svg");
   font-weight: 400;
@@ -142,14 +142,6 @@ section {
 h2 {
 	font-size: 34px;
 	font-weight: 900;
-}
-
-.shell {
-	max-width: 1330px;
-	width: 100%;
-	margin: 0px auto;
-	overflow: hidden;
-	position: relative;
 }
 //====================================================================================================================================================
 
@@ -1375,6 +1367,9 @@ h2 {
 	.icon-menu {
 		display: block;
 	}
+	.mob-menu__addit {
+	display: block;
+	}
 	.header__row-top {
     min-height: 0;
 	}
@@ -1420,13 +1415,20 @@ h2 {
 	.mob-menu {
   position: fixed;
   width: 50%;
+  height: 100%;
   margin-top: 77px;
-  left: 100%;
+  left: -100%;
+  transition: left 0.8s;
 	}
 	.mob-menu.active {
+	display: block;
   position: fixed;
   width: 50%;
   left: 50%;
+  transition: left 0.8s;
+	}
+	.mob-menu ul {
+	max-width: 100%;
 	}
 }
 
@@ -1483,14 +1485,14 @@ h2 {
 	.header__middle {
     justify-content: flex-end;
   }
-	.header__search {
-    display: none;
-	}
+	// .header__search {
+ //    display: none;
+	// }
 	.header__callback {
     flex: 0 0 auto;
 	}
 	.icon-menu {
-    top: 20px;
+    top: 25px;
 	}
 	.mob-menu {
     margin-top: 68px;
@@ -1501,6 +1503,26 @@ h2 {
 	.popular__baner {
     min-height: 230px;
     background-position: 38% 0;
+	}
+	.header__search {
+		display: none;
+		position: fixed;
+		left: 0;
+		z-index: -50;
+		max-width: 630px;
+		width: 100%;
+		background: #fff;
+		box-shadow: 0px 2px 2px 0px #D3820F;
+		padding: 0 10px;
+  	transition: top 0.8s;
+	}
+		.header__search.active {
+		display: block;
+		top: 50px;
+  	transition: top 0.8s;
+	}
+	.sub-search:after {
+    right: 20px;
 	}
 }
 

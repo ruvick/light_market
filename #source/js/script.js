@@ -11,6 +11,7 @@ if (iconMenu) {
 	});
 }
 
+// Открытие ПК меню
 let menuCat = document.querySelector(".menu__catalogy"); 
 if (menuCat) {
 	menuCat.addEventListener("click", function () {
@@ -37,6 +38,14 @@ let sldform = document.querySelector(".form-choice");
 if (butmprice) {
 	butmprice.addEventListener("click", function () {
 		sldform.classList.toggle("active");
+	});
+}
+
+let mobsearch = document.querySelector(".mob-search"); 
+let headsearch = document.querySelector(".header__search"); 
+if (mobsearch) {
+	mobsearch.addEventListener("click", function () {
+		headsearch.classList.toggle("active");
 	});
 }
 
