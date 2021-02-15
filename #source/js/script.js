@@ -23,11 +23,13 @@ if (menuCat) {
 
 
 // Открытие каталога
+let triangle = document.querySelector(".icon-menu-left")
 let butcat = document.querySelector(".menu-cat-left__btn"); 
 let mcatalog = document.querySelector(".catmenu"); 
 if (butcat) {
 	butcat.addEventListener("click", function () {
 		mcatalog.classList.toggle("active"); 
+		triangle.classList.toggle("active"); 
 	});
 }
 
@@ -38,9 +40,11 @@ let sldform = document.querySelector(".form-choice");
 if (butmprice) {
 	butmprice.addEventListener("click", function () {
 		sldform.classList.toggle("active");
+		butmprice.classList.toggle("active"); 
 	});
 }
 
+// Строка поиска на мобилках
 let mobsearch = document.querySelector(".mob-search"); 
 let headsearch = document.querySelector(".header__search"); 
 if (mobsearch) {
