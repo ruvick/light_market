@@ -974,6 +974,7 @@ h2 {
 .sl-big__icon-img {
 	position: absolute;
 	right: 25px;
+	z-index: 50;
 }
 
 .sl-big__icon-sale .sl-big__sale {
@@ -1261,6 +1262,12 @@ h2 {
     margin-right: 10px;
     flex: 1 1 auto;
 	}
+	.select-prod__price {
+    flex: 0 0 332px;
+	}
+	.select-prod-sl {
+    width: 72%;
+	}
 }
 
 @media (max-width: 1230px) {
@@ -1276,6 +1283,9 @@ h2 {
 	.prod-card .prod-card__body,
 	.popular__row .prod-card__body {
 		padding: 15px 10px;
+	}
+	.select-prod-sl {
+    width: 70%;
 	}
 }
 
@@ -1311,6 +1321,10 @@ h2 {
 	.logist__item-text p {
     max-width: 100%;
 	}
+	.select-prod__price {
+    flex: 1 1 auto;
+    margin-left: 5px;
+	}
 }
 
 @media (max-width: 1050px) {
@@ -1338,6 +1352,12 @@ h2 {
 	.prod-card .prod-card__body .btn,
 	.popular__row .prod-card__body .btn {
     padding: 7.5px 10px;
+	}
+	.select-prod__price {
+    flex: 1 1 auto;
+	}
+	.selc-price__bascet .btn {
+    padding: 11.5px 18px;
 	}
 }
 
@@ -1408,11 +1428,20 @@ h2 {
 	.main-prod-card .prod-card__body:last-child {
     display: flex;
 	}
+	.selc-price {
+    padding: 25px 5px;
+	}
+	.tech-text__block-cl {
+    margin-right: 5px;
+	}
 }
 
 @media (max-width: 920px) {
 	.page__main {
     width: 77%;
+	}
+	.sl-big__icon-img {
+    right: 10px;
 	}
 }
 
@@ -1432,6 +1461,31 @@ h2 {
 	}
 	.footer__col {
 		flex: 0 1 25%;
+	}
+	.select-prod-block {
+    flex-direction: column;
+	}
+	.select-prod-sl {
+    width: 100%;
+	}
+	.sl-big__icon-img {
+    right: 25px;
+	}
+	.select-prod__price {
+		display: flex;
+		// justify-content: space-between;
+		max-width: 100%;
+		margin-left: 0;
+		margin-bottom: 35px;
+	}
+	.selc-price {
+    width: 40%;
+    padding: 25px 13px;
+    margin-bottom: 0;
+    margin-right: 25px;
+	}
+	.select-prod__callback {
+    width: 45%;
 	}
 }
 
@@ -1581,6 +1635,18 @@ h2 {
 	.page .breadcrumb {
     margin-bottom: 10px;
 	}
+	.select-prod {
+    padding-top: 90px;
+	}
+	.select-slider-big {
+    height: 350px;
+	}
+	.select-slider-big.slick-slider .slick-track,
+	.select-slider-big__item img,
+	.select-slider-big.slick-slider .slick-list {
+    height: 100%;
+	}
+	
 }
 
 
@@ -1619,6 +1685,9 @@ h2 {
 	.main-prod-card .prod-card__body {
     flex: 0 1 49.5% !important;
 	}
+	.tech-text__item_left {
+    min-height: 43px;
+	}
 }
 
 @media (max-width: 650px) {
@@ -1636,6 +1705,18 @@ h2 {
 	}
 	.brands {
     padding: 25px 0 45px 0;
+	}
+	.select-prod__price {
+    justify-content: space-between;
+	}
+	.selc-price {
+    width: 50%;
+    padding: 25px 13px;
+    margin-bottom: 0;
+    margin-right: 0;
+	}
+	.select-prod__callback {
+    width: 48%;
 	}
 }
 
@@ -1659,6 +1740,9 @@ h2 {
 	}
 	.main-prod-card .prod-card__body {
     flex: 0 1 100% !important;
+	}
+	.select-prod .breadcrumb ul {
+    flex-wrap: wrap;
 	}
 }
 
@@ -1724,6 +1808,7 @@ h2 {
 	.page__body {
     flex-direction: column;
 	}
+	.select-prod .breadcrumb,
 	.page .breadcrumb,
 	.sidebar-sl {
     display: none;
@@ -1769,6 +1854,20 @@ h2 {
 	.footer-bot__row {
     min-height: 55px;
 	}
+	.selc-price {
+    padding: 20px 5px;
+	}
+	.selc-price__act {
+    padding: 17px 5px;
+	}
+	.select-prod__callback {
+    padding: 20px 10px 25px 10px;
+	}
+	.select-prod-slider__item img {
+		max-width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
 }
 
 @media (max-width: 540px) {
@@ -1781,6 +1880,13 @@ h2 {
 	}
 	.footer__col {
     flex: 0 1 50%;
+	}
+	.select-slider-big {
+    height: 300px;
+	}
+	.select-slider-big__item img {
+		max-width: 100%;
+    object-fit: cover;
 	}
 }
 
@@ -1832,6 +1938,25 @@ h2 {
 	.modern-baner {
     display: none;
 	}
+	.tech-text__row {
+    flex-wrap: wrap;
+	}
+	.tech-text__block-cl {
+		max-width: 100%;
+    margin-right: 0;
+	}
+	.tech-text__block-cl:last-child {
+		margin-top: 38px;
+	}
+}
+
+@media (max-width: 500px) {
+	.selc-price {
+    width: 58%;
+	}
+	.select-prod__callback {
+    width: 40%;
+	}
 }
 
 @media (max-width: 480px) {
@@ -1849,6 +1974,27 @@ h2 {
 		font-size: 43px;
 	}
 	.advant__item p {
+    text-align: justify;
+	}
+	.select-prod__price {
+		flex-wrap: wrap;
+	}
+	.selc-price {
+    width: 100%;
+    margin-bottom: 15px;
+   	padding: 25px 13px;
+	}
+	.select-prod__callback {
+    width: 100%;
+    padding: 25px 20px 32px 25px;
+	}
+	.selc-price__act {
+    padding: 17.3px 14px 11.5px 14px;
+	}
+	.techchar-prod p {
+    text-align: justify;
+	}
+	.descript-prod p {
     text-align: justify;
 	}
 }
@@ -1897,6 +2043,9 @@ h2 {
 	}
 	.pagination__next {
 		margin-left: 0;
+	}
+	.select-slider-big {
+    height: 250px;
 	}
 }
 
