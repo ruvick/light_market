@@ -436,6 +436,8 @@ h2 {
 	&__item {
 		flex: 0 1 16%;
 		margin-right: 50px;
+		display: flex;
+    flex-direction: column;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -444,6 +446,7 @@ h2 {
 			line-height: 20.75px;
 			font-weight: 600;
 			margin-bottom: 26px;
+			flex: 1 1 auto;
 		}
 		p {
 			line-height: 18px;
@@ -1302,6 +1305,16 @@ h2 {
 	.menu__list li:nth-child(9) {
 		display: none;
 	}
+	.advant__row {
+		justify-content: space-between;
+	}
+	.advant__item {
+    flex: 0 1 18%;
+    margin-right: 0;
+	}
+	.advant__item h4 {
+    margin-bottom: 15px;
+	}
 }
 
 @media (max-width: 960px) {
@@ -1330,6 +1343,9 @@ h2 {
 	.new-items {
     padding: 20px 0 0px 0;
 	}
+	.logist__item img {
+    opacity: 0.6;
+	}
 }
 
 @media (max-width: 900px) {
@@ -1338,6 +1354,34 @@ h2 {
 	}
 	.info-sl__slider {
 		flex: 1 0 65%;
+	}
+	.advant__item {
+    flex: 0 1 20%;
+    margin-right: 6px;
+	}
+	.footer__row {
+    flex-wrap: wrap;
+	}
+	.footer__col {
+		flex: 0 1 25%;
+	}
+}
+
+@media (max-width: 840px) {
+	.advant__row {
+    flex-wrap: wrap;
+	}
+	.advant__item {
+    flex: 0 1 48%;
+    margin-bottom: 23px;
+    margin-right: 0;
+	}
+	.brands__row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+	}
+	.brands__item {
+    flex: 0 1 25%;
 	}
 }
 
@@ -1442,6 +1486,18 @@ h2 {
 		top: 20%;
 		left: 43%;
 	}
+	.footer__col:nth-child(2) {
+		display: none;
+	}
+	.footer__col {
+    flex: 0 1 20%;
+	}
+	.popular h2 {
+    margin-bottom: 20px;
+	}
+	.new-items h2 {
+    margin-bottom: 20px;
+	}
 }
 
 
@@ -1454,8 +1510,19 @@ h2 {
     flex-wrap: wrap;
 	}
 	.logist__item {
-    flex: 0 1 83%;
-    margin-bottom: 15px;
+    flex: 0 1 100%;
+    margin-bottom: 25px;
+	}
+	.logist__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	}
+	.advant {
+    padding: 0px 0 10px 0;
+	}
+	.footer__col {
+    flex: 0 1 23%;
 	}
 }
 
@@ -1468,11 +1535,22 @@ h2 {
 //   transition: right 0.8s; }
 }
 
-@media (max-width: 680px) {
-// .prod-card .prod-card__body,
-// .popular__row .prod-card__body {
-//    padding: 15px 8px;
-// 	}
+@media (max-width: 650px) {
+	.advant__item {
+    flex: 0 1 49%;
+	}
+		.brands__row {
+    justify-content: space-between;
+	}
+	.brands__item {
+    flex: 0 1 35%;
+	}
+	.brands__item:nth-child(7) {
+    display: none;
+	}
+	.brands {
+    padding: 25px 0 45px 0;
+	}
 }
 
 @media (max-width: 640px) {
@@ -1535,7 +1613,28 @@ h2 {
 	.sub-search:after {
     right: 20px;
 	}
+	.footer__col {
+    flex: 0 1 38%;
+    margin-bottom: 20px;
+	}
+	.footer__col:last-child {
+    margin-bottom: 0;
+	}
+	.footer__col_forms h3 {
+    margin-bottom: 38px;
+	}
+	.footer__info-text {
+    margin-top: 20px;
+	}
+
 }
+
+@media (max-width: 600px) {
+	.brands__item {
+    flex: 0 1 33%;
+	}
+}
+
 
 @media (max-width: 560px) {
 	.menu__list li:nth-child(4) {
@@ -1543,6 +1642,25 @@ h2 {
 	}
 	.mob-menu {
   width: 100%;
+	}
+.footer-bot__item p {
+    display: none;
+	}
+	.footer-bot__row {
+    min-height: 55px;
+	}
+}
+
+@media (max-width: 540px) {
+	.footer__col_forms {
+		flex: 0 1 100% !important;
+		order: 2;
+	}
+	.footer__forms input {
+    width: 100%;
+	}
+	.footer__col {
+    flex: 0 1 50%;
 	}
 }
 
@@ -1562,6 +1680,32 @@ h2 {
   width: 100%;
   left: 0%;
 	}
+	.logist {
+    padding: 20px 0 33px 0;
+	}
+	.advant__item {
+   	flex: 0 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+	}
+	.advant__item:before {
+    width: 48px;
+    margin-right: 13px;
+	}
+	.advant__item h4 {
+    width: 80%;
+	}
+	.advant__item h4 br {
+    display: none;
+	}
+	.footer {
+    padding: 30px 0 20px 0;
+	}
+	.footer .header__callback {
+		display: none;
+	}
 }
 
 @media (max-width: 480px) {
@@ -1577,6 +1721,9 @@ h2 {
 		top: 20%;
 		left: 33%;
 		font-size: 43px;
+	}
+	.advant__item p {
+    text-align: justify;
 	}
 }
 
@@ -1606,6 +1753,9 @@ h2 {
 		left: 46%;
 		font-size: 36px;
 	}
+	.footer__col {
+    flex: 0 1 43%;
+	}
 }
 
 @media (max-width: 414px) {
@@ -1615,6 +1765,9 @@ h2 {
 	.popular__baner {
     padding: 20px 0 0 10px;
 	}
+	.footer-bot__item img {
+		width: 100%;
+	}
 }
 
 @media (max-width: 380px) {
@@ -1622,6 +1775,32 @@ h2 {
 		top: 20%;
 		left: 33%;
 		font-size: 33px;
+	}
+	.logist__item-text h3 {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 8px;
+	}
+	.logist__item-text p {
+		width: 90%;
+    font-size: 12.5px;
+    line-height: 16px;
+    margin-bottom: 8px;
+	}
+}
+
+@media (max-width: 340px) {
+	.footer__col {
+    flex: 0 1 30%;
+	}
+}
+
+@media (max-width: 330px) {
+.advant__item h4 {
+    width: 50%;
+	}
+	.footer__col {
+    flex: 0 1 30%;
 	}
 }
 
