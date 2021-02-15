@@ -510,6 +510,10 @@ h2 {
 
 //<Люстры>====================================================================================================================================
 
+.page__body {
+	justify-content: space-between;
+}
+
 .page {
 	padding: 30px 0 10px 0;
 }
@@ -743,7 +747,7 @@ h2 {
 
 // Основной блок Люстры
 .page__main {
-	width: 80%;
+	width: 78%;
 	// margin-top: -16px;
 	justify-content: space-between;
 }
@@ -793,6 +797,9 @@ h2 {
 	position: relative;
 	margin-top: 30px;
 	margin-bottom: 30px;
+}
+.modern-baner img {
+	width: 100%;
 }
 .modern-baner__text {
 	position: absolute;
@@ -1249,6 +1256,11 @@ h2 {
 	.menu__list li:after {
 		display: none;
 	}
+	.page__side {
+    width: 20%;
+    margin-right: 10px;
+    flex: 1 1 auto;
+	}
 }
 
 @media (max-width: 1230px) {
@@ -1280,6 +1292,17 @@ h2 {
 	}
 }
 
+@media (max-width: 1110px) {
+	.main-prod-card .prod-card__body {
+    flex: 0 1 24.5%;
+    flex: 0 0 24.5% !important;
+	}
+	.page__side {
+   flex: 0 0 19%;
+   margin-right: 6px;
+	}
+}
+
 @media (max-width: 1100px) {
 	.prod-card .prod-card__body,
 	.popular__row .prod-card__body {
@@ -1287,6 +1310,23 @@ h2 {
 	}
 	.logist__item-text p {
     max-width: 100%;
+	}
+}
+
+@media (max-width: 1050px) {
+	.main-prod-card .prod-card__body .btn {
+    padding: 7.5px 10px;
+	}
+	.page__side {
+   flex: 0 0 19%;
+   margin-right: 6px;
+	}
+	.modern-baner__text {
+    top: 13%;
+    left: 25%;
+	}
+	.modern-baner img {
+    opacity: 0.8;
 	}
 }
 
@@ -1314,6 +1354,25 @@ h2 {
 	}
 	.advant__item h4 {
     margin-bottom: 15px;
+	}
+	.page__side {
+    flex: 0 0 205px;
+	}
+}
+
+@media (max-width: 992px) {
+	.main-prod-card {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+	}
+	.main-prod-card .prod-card__body {
+		padding: 15px 20px 15px 22px;
+    flex: 0 0 48% !important;
+    margin-bottom: 15px;
+	}
+	.main-prod-card .prod-card__body .btn {
+    padding: 7.5px 18px;
 	}
 }
 
@@ -1345,6 +1404,15 @@ h2 {
 	}
 	.logist__item img {
     opacity: 0.6;
+	}
+	.main-prod-card .prod-card__body:last-child {
+    display: flex;
+	}
+}
+
+@media (max-width: 920px) {
+	.page__main {
+    width: 77%;
 	}
 }
 
@@ -1382,6 +1450,11 @@ h2 {
 	}
 	.brands__item {
     flex: 0 1 25%;
+	}
+	.modern-baner__text h3 {
+    font-size: 23px;
+    line-height: 23px;
+    margin-bottom: 8px;
 	}
 }
 
@@ -1498,6 +1571,16 @@ h2 {
 	.new-items h2 {
     margin-bottom: 20px;
 	}
+	.page {
+    padding: 85px 0 10px 0;
+	}
+	.modern-baner {
+    margin-top: 0px;
+    margin-bottom: 20px;
+	}
+	.page .breadcrumb {
+    margin-bottom: 10px;
+	}
 }
 
 
@@ -1527,12 +1610,15 @@ h2 {
 }
 
 @media (max-width: 700px) {
-// .mob-menu {
-//   width: 100%;
-//   right: -100%;
-//   -webkit-transition: right 0.8s;
-//   -o-transition: right 0.8s;
-//   transition: right 0.8s; }
+.main-prod-card .prod-card__body {
+	padding: 15px 10px;
+	}
+	.main-prod-card {
+    justify-content: space-between;
+	}
+	.main-prod-card .prod-card__body {
+    flex: 0 1 49.5% !important;
+	}
 }
 
 @media (max-width: 650px) {
@@ -1564,6 +1650,15 @@ h2 {
 	}
 	.logist__item {
     flex: 1 1 83%;
+	}
+	 .main-prod-card {
+    justify-content: center;
+	}
+	.main-prod-card .prod-card__body {
+	padding: 15px 20px 15px 22px;
+	}
+	.main-prod-card .prod-card__body {
+    flex: 0 1 100% !important;
 	}
 }
 
@@ -1626,7 +1721,32 @@ h2 {
 	.footer__info-text {
     margin-top: 20px;
 	}
-
+	.page__body {
+    flex-direction: column;
+	}
+	.page .breadcrumb,
+	.sidebar-sl {
+    display: none;
+	}
+	.page__side {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+	}
+	.page__main {
+    width: 100%;
+	}
+	.menu-choice__btn, .menu-cat-left__btn,
+	.menu-choice, .menu-cat-left {
+    max-width: 100%;
+	}
+	.menu-choice, .menu-cat-left {
+    margin-bottom: 5px;
+	}
+	.pagination__nav-links {
+    max-width: 100%;
+    justify-content: space-between;
+	}
 }
 
 @media (max-width: 600px) {
@@ -1706,6 +1826,12 @@ h2 {
 	.footer .header__callback {
 		display: none;
 	}
+	.page {
+    padding: 75px 0 10px 0;
+	}
+	.modern-baner {
+    display: none;
+	}
 }
 
 @media (max-width: 480px) {
@@ -1756,6 +1882,22 @@ h2 {
 	.footer__col {
     flex: 0 1 43%;
 	}
+	.main-block__choice {
+    flex-wrap: wrap;
+	}
+	.main-block__select {
+		justify-content: space-between;
+    width: 100%;
+    // margin-bottom: 10px;
+	}
+	.pagination__block-dot,
+	.pagination__numbers,
+	.pagination__back {
+		margin-right: 0;
+	}
+	.pagination__next {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 414px) {
@@ -1787,12 +1929,23 @@ h2 {
     line-height: 16px;
     margin-bottom: 8px;
 	}
+	.pagination__numbers:nth-child(6) {
+		display: none;
+	}
 }
 
 @media (max-width: 340px) {
 	.footer__col {
     flex: 0 1 30%;
 	}
+	.pagination__next,
+	.pagination__back {
+    width: 20%;
+	}
+	.pagination__back:before,
+	.pagination__next:after {
+		display: none;
+  }
 }
 
 @media (max-width: 330px) {
