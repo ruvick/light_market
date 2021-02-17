@@ -2768,7 +2768,7 @@ h2 {
     display: block !important;
     position: fixed;
     height: 100%;
-    margin-top: 77px;
+    margin-top: 75px;
     width: 50%;
     right: 0% !important;
     -webkit-transition: all 0.65s;
@@ -2915,7 +2915,7 @@ h2 {
   .icon-menu {
     top: 25px; }
   .mob-menu.active {
-    margin-top: 68px; }
+    margin-top: 65px; }
   .mob-search:before {
     display: block; }
   .popular__baner {
@@ -3045,7 +3045,7 @@ h2 {
   .mob-menu.active {
     width: 100%;
     left: 0%;
-    padding: 65px 0 50px 0;
+    padding: 65px 0 5px 0;
     margin-top: 5px; }
   .logist {
     padding: 20px 0 33px 0; }
