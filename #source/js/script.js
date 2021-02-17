@@ -1,6 +1,6 @@
 
 //BURGER
-let iconMenu = document.querySelector(".icon-menu"); 
+let iconMenu = document.querySelector(".icon-menu");
 let body = document.querySelector("body");
 let menuBody = document.querySelector(".mob-menu");
 if (iconMenu) {
@@ -12,41 +12,52 @@ if (iconMenu) {
 }
 
 // Открытие ПК меню
-let menuCat = document.querySelector(".menu__catalogy"); 
-if (menuCat) {
-	menuCat.addEventListener("click", function () {
-		menuCat.classList.toggle("active");
-		// body.classList.toggle("lock");
-		menuBody.classList.toggle("active");
-	});
+// let menuCat = document.querySelector(".menu__catalogy"); 
+// if (menuCat) {
+// 	menuCat.addEventListener("click", function () {
+// 		// menuCat.classList.toggle("active");
+// 		// body.classList.toggle("lock");
+// 		menuBody.classList.toggle("active");
+// 	});
+// }
+if (document.body.clientWidth>1024){
+function hideMenu() {
+  $('.mob-menu').slideUp(600);
 }
-
+function showMenu() {
+  $('.mob-menu').slideDown(600);
+}
+$(document).ready(function() {
+  $(".menu__catalogy").on("mouseover", showMenu);
+  $(".header__menu").on("mouseleave", hideMenu);
+});
+}
 
 // Открытие каталога
 let triangle = document.querySelector(".icon-menu-left")
-let butcat = document.querySelector(".menu-cat-left__btn"); 
-let mcatalog = document.querySelector(".catmenu"); 
+let butcat = document.querySelector(".menu-cat-left__btn");
+let mcatalog = document.querySelector(".catmenu");
 if (butcat) {
 	butcat.addEventListener("click", function () {
-		mcatalog.classList.toggle("active"); 
-		triangle.classList.toggle("active"); 
+		mcatalog.classList.toggle("active");
+		triangle.classList.toggle("active");
 	});
 }
 
 
 // Открытие меню ползунков
-let butmprice = document.querySelector(".menu-choice__btn"); 
-let sldform = document.querySelector(".form-choice"); 
+let butmprice = document.querySelector(".menu-choice__btn");
+let sldform = document.querySelector(".form-choice");
 if (butmprice) {
 	butmprice.addEventListener("click", function () {
 		sldform.classList.toggle("active");
-		butmprice.classList.toggle("active"); 
+		butmprice.classList.toggle("active");
 	});
 }
 
 // Строка поиска на мобилках
-let mobsearch = document.querySelector(".mob-search"); 
-let headsearch = document.querySelector(".header__search"); 
+let mobsearch = document.querySelector(".mob-search");
+let headsearch = document.querySelector(".header__search");
 if (mobsearch) {
 	mobsearch.addEventListener("click", function () {
 		headsearch.classList.toggle("active");
@@ -55,113 +66,113 @@ if (mobsearch) {
 
 
 // Маска телефона
-var inputmask_phone = {"mask": "+9(999)999-99-99"};
-jQuery("input[type=tel]").inputmask(inputmask_phone); 
+var inputmask_phone = { "mask": "+9(999)999-99-99" };
+jQuery("input[type=tel]").inputmask(inputmask_phone);
 
 
 
 //Валидация телефона + Отправщик
-jQuery('.footer__forms button').click(function(e){ 
-  e.preventDefault();
-        
-  let persPhone = jQuery('.footer__forms input[name=email]').val(); 
-    if ((persPhone == "")||(persPhone.indexOf("_")>0)) { 
-        $(this).siblings('input[name=email]').css("background-color","#ff91a4")
-          return;
-     }
-        
-  var  jqXHR = jQuery.post(
-    "../sender/send.php",
-    {
-     phone: jQuery('.footer__forms input[name=tel]').val(),    
-     name: jQuery('.footer__forms input[name=name]').val(),
-     mail: jQuery('.footer__forms textarea[name=text]').val(),
-    }
-            
-   );
+jQuery('.footer__forms button').click(function (e) {
+	e.preventDefault();
 
-    jqXHR.done(function (responce) {
-      console.log(responce);
-      document.location.href = "../thank-you.html"; 
-      jQuery('.footer__forms input[name=tel]').val("");  
-      jQuery('.footer__forms input[name=name]').val("");
-      jQuery('.footer__forms textarea[name=text]').val("");
-    });
-        
-    jqXHR.fail(function (responce) {
-      console.log(responce);
-      alert("Произошла ошибка попробуйте позднее!");
-    });
- 
+	let persPhone = jQuery('.footer__forms input[name=email]').val();
+	if ((persPhone == "") || (persPhone.indexOf("_") > 0)) {
+		$(this).siblings('input[name=email]').css("background-color", "#ff91a4")
+		return;
+	}
+
+	var jqXHR = jQuery.post(
+		"../sender/send.php",
+		{
+			phone: jQuery('.footer__forms input[name=tel]').val(),
+			name: jQuery('.footer__forms input[name=name]').val(),
+			mail: jQuery('.footer__forms textarea[name=text]').val(),
+		}
+
+	);
+
+	jqXHR.done(function (responce) {
+		console.log(responce);
+		document.location.href = "../thank-you.html";
+		jQuery('.footer__forms input[name=tel]').val("");
+		jQuery('.footer__forms input[name=name]').val("");
+		jQuery('.footer__forms textarea[name=text]').val("");
+	});
+
+	jqXHR.fail(function (responce) {
+		console.log(responce);
+		alert("Произошла ошибка попробуйте позднее!");
+	});
+
 });
 
 
 // Slider на главной
-	$('.info-sl__slider').slick( {
-		arrows: false,
-		dots: true,
-  	infinite: true,
-  	speed: 1000,
-  	slidesToShow: 1,
-  	autoplay: true,
-  	autoplaySpeed: 1800,
-  	adaptiveHeight: true
-	});
+$('.info-sl__slider').slick({
+	arrows: false,
+	dots: true,
+	infinite: true,
+	speed: 1000,
+	slidesToShow: 1,
+	autoplay: true,
+	autoplaySpeed: 1800,
+	adaptiveHeight: true
+});
 
 
 // Slider в Сайдбаре
-	$('.sidebar-slider').slick( {
-		arrows: true,
-		dots: false,
-  	infinite: true,
-  	speed: 1000,
-  	slidesToShow: 1,
-  	autoplay: true,
-  	// autoplaySpeed: 1800,
-  	adaptiveHeight: true,
-  	vertical: true
-	});
+$('.sidebar-slider').slick({
+	arrows: true,
+	dots: false,
+	infinite: true,
+	speed: 1000,
+	slidesToShow: 1,
+	autoplay: true,
+	// autoplaySpeed: 1800,
+	adaptiveHeight: true,
+	vertical: true
+});
 
 
 // Slider Товара
-	$('.select-prod-slider').slick( {
-		arrows: false,
-		dots: false,
-  	infinite: true,
-  	speed: 1000,
-  	slidesToShow: 4,
-  	slidesToScroll: 1,
-  	 centerMode: true,
-  	focusOnSelect: true,
-  	autoplaySpeed: 1800,
-  	asNavFor: ".select-slider-big",
-  	adaptiveHeight: true
-	});
-	$('.select-slider-big').slick( {
-		arrows: false,
-		dots: false,
-		fade: true,
-		slidesToShow: 1,
-  	slidesToScroll: 1,
-  	draggable: false,
-		asNavFor: ".select-prod-slider"
-	});
+$('.select-prod-slider').slick({
+	arrows: false,
+	dots: false,
+	infinite: true,
+	speed: 1000,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	centerMode: true,
+	focusOnSelect: true,
+	autoplaySpeed: 1800,
+	asNavFor: ".select-slider-big",
+	adaptiveHeight: true
+});
+$('.select-slider-big').slick({
+	arrows: false,
+	dots: false,
+	fade: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	draggable: false,
+	asNavFor: ".select-prod-slider"
+});
 
 
- 
+
 $('.minus').click(function () {
-  var $input = $(this).parent().find('input');
-  var count = parseInt($input.val()) - 1;
-  count = count < 1 ? 1 : count;
-  $input.val(count);
-  $input.change();
-  return false;
- });
+	var $input = $(this).parent().find('input');
+	var count = parseInt($input.val()) - 1;
+	count = count < 1 ? 1 : count;
+	$input.val(count);
+	$input.change();
+	return false;
+});
 $('.plus').click(function () {
-  var $input = $(this).parent().find('input');
-  $input.val(parseInt($input.val()) + 1);
-  $input.change();
-  return false;
+	var $input = $(this).parent().find('input');
+	$input.val(parseInt($input.val()) + 1);
+	$input.change();
+	return false;
 });
 
 
